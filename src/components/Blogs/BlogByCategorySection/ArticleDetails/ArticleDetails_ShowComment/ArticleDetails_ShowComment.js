@@ -1,10 +1,14 @@
 import React from 'react';
+import ArticleDetails_ShowSingleComment from './ArticleDetails_ShowSingleComment/ArticleDetails_ShowSingleComment';
 
-const ArticleDetails_ShowComment = ({_id}) => {
+const ArticleDetails_ShowComment = ({comments}) => {
+    // call from ArticleDetails
     //call from ArticleDetails
     return (
         <div>
-            ArticleDetails_ShowComment
+            {
+                comments.map(comment=><li><ArticleDetails_ShowSingleComment comment={comment}></ArticleDetails_ShowSingleComment></li>)
+            }
         </div>
     );
 };
